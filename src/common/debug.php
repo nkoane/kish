@@ -4,27 +4,27 @@ namespace Kish\Common;
 
 class Debug
 {
-    public static function dump($data)
+    public static function prepend(bool $end = false): void
     {
-        // check if its a browser or console
         if (php_sapi_name() !== 'cli') {
-            echo '<pre>';
-        } else {
-            echo "\n\n";
-        }
-
-        var_dump($data);
-
-        if (php_sapi_name() !== 'cli') {
-            echo '</pre>';
+            echo $end ? '</pre>' :  '<pre>';
         } else {
             echo "\n\n";
         }
     }
 
-    public static function dd($data)
+    public static function dump(mixed $value, mixed ...$values): void
     {
-        self::dump($data);
+        self::prepend();
+
+        $values ? var_dump($value, $values) : var_dump($value);
+
+        self::prepend(true);
+    }
+
+    public static function dd(mixed $value, mixed ...$values): void
+    {
+        self::dump($value, $values);
         die();
     }
 }

@@ -7,4 +7,4 @@ require 'vendor/autoload.php';
 
 $app = new App();
 
-\Kish\Common\Debug::dump($app);
+\Kish\Common\Debug::dump($app, ['a', 'b', 'c']);
