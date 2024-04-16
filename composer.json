@@ -1,0 +1,19 @@
+{
+    "name": "ltdn/kish",
+    "description": "yet, another php-framework: a domain specific routing framework, in the works.",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Kish\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "lebogang nkoane <lebogang.nkoane@gmail.com>",
+            "homepage": "https://ntho.li",
+            "role": "developer"
+        }
+    ],
+    "require": {}
+}
