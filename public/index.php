@@ -1,10 +1,10 @@
 <?php
 
-use Kish\App;
+use Kish\Kernel;
 
 require 'vendor/autoload.php';
 
 
-$app = new App();
+$app = new Kernel();
 
 \Kish\Common\Debug::dump($app, ['a', 'b', 'c']);

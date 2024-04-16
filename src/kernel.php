@@ -2,7 +2,7 @@
 
 namespace Kish;
 
-class App
+class Kernel
 {
     public function __construct()
     {
